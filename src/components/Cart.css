@@ -1,23 +1,11 @@
-/* src/App.css */
-
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-}
-
-.App {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
+/* src/components/Cart.css */
 
 .cart {
   background-color: #fff;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  margin: 20px;
 }
 
 .cart h2 {
@@ -36,6 +24,7 @@ body {
   align-items: center;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
 }
 
 .cart li:last-child {
@@ -118,4 +107,93 @@ body {
   font-size: 1.5em;
   color: #ff6f61;
   font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+  .cart {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .cart li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart img {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+
+  .cart div > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart span {
+    margin: 10px 0;
+  }
+
+  .cart-total {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-total p {
+    margin: 5px 0;
+  }
+
+  .cart-total .total-amount {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart {
+    margin: 5px;
+    padding: 10px;
+  }
+
+  .cart li {
+    padding: 15px 0;
+  }
+
+  .cart img {
+    width: 60px;
+  }
+
+  .cart div h3 {
+    font-size: 1em;
+  }
+
+  .cart div p {
+    font-size: 0.9em;
+  }
+
+  .cart div > div {
+    margin-top: 5px;
+  }
+
+  .cart button {
+    padding: 3px 5px;
+    font-size: 0.8em;
+  }
+
+  .cart span {
+    font-size: 1em;
+  }
+
+  .cart p {
+    font-size: 1em;
+  }
+
+  .cart-total p {
+    font-size: 1em;
+  }
+
+  .cart-total .total-amount {
+    font-size: 1.1em;
+  }
 }
